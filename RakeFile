@@ -1,0 +1,33 @@
+#encoding: UTF-8
+DEBUG       = FALSE
+
+ENV['root'] = Dir.pwd
+ENV['book_folder'] = File.join(ENV['root'], 'book')
+
+ENV['epub_file'] = "output.epub"
+ENV['metadata_file'] = "metadata.xml"
+ENV['cover_file'] = "cover.png"
+
+
+require './scripts/rake.rb'
+
+
+desc "RAKE por defecto"
+task :default => :pandoc
+
+desc "Merge and copy files"
+task :prepare do
+  prepare_content
+end
+
+desc "Ejecutar pandoc"
+task :pandoc => :prepare do
+  generate_epub
+end
+
+desc "Remove output files (included book)"
+task :clean do
+  FileUtils.remove_dir ENV['tmp'], force: TRUE
+  FileUtils.remove_dir ENV['tmp'], force: TRUE
+  puts "Remove output (#{ENV['tmp']})"
+end

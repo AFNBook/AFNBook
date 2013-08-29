@@ -1,0 +1,5 @@
+<h1><a href="<%= request.base_url %>">INDEX</a></h1>
+<hr />
+<% @chapters.each_with_index do |chapter, index| %>
+    <li><a href="<%= request.base_url %>/chapter/<%= index %>/<%= URI.escape chapter %>.html"><%= chapter %></a></li>
+<% end %>
