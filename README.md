@@ -18,7 +18,7 @@ Nothing more, thanks because start to read this book (and luck with AFNetworking
   
 * [EPUB version](http://d.pr/f/DMSx) (version RC1).
 * [Kindle version](http://d.pr/f/qvzU) (version RC1).
-* [Web version](http://libroafn.herokuapp.com/) (**WIP**, I'm developing that as pet-project to learn Ruby, so be pattient please :))
+* [Web version](http://afnbook.github.io/)
 
 
 ## License
